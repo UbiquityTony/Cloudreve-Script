@@ -75,6 +75,7 @@ read -p "$text Enter M for Master, enter S for Slave:" cloudreve_install_mode
 ### Prepare to install
 if [[ $cloudreve_install_mode == "M" ]]; then
     echo "1e!"
+    install_cloudreve_master
 elif [[ $cloudreve_install_mode == "S" ]]; then
     echo "$(date +"%Y-%m-%d %T") Still developing."        
 	exit 1
