@@ -4,5 +4,5 @@ Cloudreve fully automatic only with one click installation, upgrade and manageme
 ## 正式版 （稳定可用）(v1.0.0)
 
 ```shell
-wget -N --no-check-certificate https://raw.githubusercontent.com/UbiquityTony/Cloudreve-Script/main/official.sh && bash offical.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/UbiquityTony/Cloudreve-Script/main/official.sh && bash official.sh
 ```
