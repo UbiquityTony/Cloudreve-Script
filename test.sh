@@ -57,13 +57,15 @@ echo "Select your install mode. Support master or Slave."
 
 install_cloudreve_master(){
 if [[ $cloudreve_install_mode_init_time == "0" ]]; then
-    read -p "Enter M for Master, enter S for Slave:" cloudreve_install_mode
+    text=
 else
-	read -p "Error, please try again:" cloudreve_install_mode
+    text=shibai
     exit 1
 fi
 }
 
+read -p "$text Enter M for Master, enter S for Slave:" cloudreve_install_mode
+	##read -p "Error, please try again:" cloudreve_install_mode
 
 ### Check Script Update
 #if [[ $cloudreve_install_mode == "M" ]]; then
@@ -72,7 +74,7 @@ fi
 
 ### Prepare to install
 if [[ $cloudreve_install_mode == "M" ]]; then
-    install_cloudreve_master
+    echo "1e!"
 elif [[ $cloudreve_install_mode == "S" ]]; then
     echo "$(date +"%Y-%m-%d %T") Still developing."        
 	exit 1
