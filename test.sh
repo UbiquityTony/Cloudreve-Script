@@ -60,7 +60,8 @@ if [[ $cloudreve_install_mode_init_time == "0" ]]; then
     read -p "Enter M for Master, enter S for Slave:" cloudreve_install_mode
 else
 	read -p "Error, please try again:" cloudreve_install_mode
-exit
+    exit 1
+fi
 }
 
 
