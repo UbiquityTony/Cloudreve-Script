@@ -15,7 +15,7 @@ update_time=2022.06.17
 #beta_connect=
 
 ### update beta
-beta_verison=uh34t
+beta_verison=uh34tety
 beta_word=beta
 beta_connect=
 
