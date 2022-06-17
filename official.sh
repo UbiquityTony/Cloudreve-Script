@@ -4,7 +4,7 @@
 cloudreve_version=$(curl -Ls "https://api.github.com/repos/cloudreve/cloudreve/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 
 ### update needed
-script_version=v1.0.0
+script_version=v1.0.1
 update_time=2022.06.17
 
 ### update official edition
@@ -83,8 +83,8 @@ if [[ $cloudreve_install_mode == "M" ]]; then
 
     ### Download tools needed
     echo "$(date +"%Y-%m-%d %T") Downloading things needed ......"
-    wget -nv -o /dev/stdout -O $cloudreve_install_path/$cloudreve_mixed_name --no-check-certificate $cloudreve_tools_1_link
-    wget -nv -o /dev/stdout -O $cloudreve_install_path/$cloudreve_mixed_name --no-check-certificate $cloudreve_tools_2_link
+    wget -nv -o /dev/stdout -O $cloudreve_install_path/$cloudreve_tools_1 --no-check-certificate $cloudreve_tools_1_link
+    wget -nv -o /dev/stdout -O $cloudreve_install_path/$cloudreve_tools_2 --no-check-certificate $cloudreve_tools_2_link
 
     ### Grant authority
     chmod +x $cloudreve_install_path/$cloudreve_mixed_name
