@@ -11,12 +11,12 @@ script_current_version=1.1.0
 update_time=2022.06.19
 
 ### update official edition
-#beta_verison=false
+beta_verison=false
 beta_word=
 beta_connect=
 
 ### update beta
-beta_verison=84574
+#beta_verison=84574
 #beta_word=beta
 #beta_connect=
 
