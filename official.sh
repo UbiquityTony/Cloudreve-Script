@@ -7,7 +7,7 @@ script_latest_version=$(curl -Ls "https://api.github.com/repos/UbiquityTony/Clou
 cloudreve_version=$(curl -Ls "https://api.github.com/repos/cloudreve/cloudreve/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 
 ### update needed
-script_current_version=1.0.1
+script_current_version=1.1.0
 update_time=2022.06.19
 
 ### update official edition
