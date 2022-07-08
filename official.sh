@@ -1,11 +1,11 @@
 #！/bin/bash
 
 ### release and update needed
-script_current_version=2.0.0
-update_time=2022.07.06
+script_current_version=2.1.0
+update_time=2022.07.08
 beta_verison=false
 developer_beta=false
-beta_commit=200RC4
+beta_commit=210RC1
 
 ### check os
 if [[ -f /etc/redhat-release ]]; then
@@ -95,24 +95,30 @@ fi
 if [[ $(curl -Ls "${script_api_base}node1/status" | jq '.status' | sed 's/\"//g') == "online" ]]; then
     wget -N -O /node1status.json --no-check-certificate ${script_api_base}node1/node1status
     if [[ $(cat /node1status.json | jq '.ping' | sed 's/\"//g') == "success" ]]; then
-        node1_status_mixed="Available; Cloudreve current version : Supported"
+        node1_status_mixed="Available; Cloudreve v${cloudreve_version} : Supported"
+        node1_status_code=0
     else
         node1_status_mixed=Unavailable
+        node1_status_code=1
     fi
 else
     node1_status_mixed=Unavailable
+    node1_status_code=1
 fi
 
 #node 2
 if [[ $(curl -Ls "${script_api_base}node2/status" | jq '.status' | sed 's/\"//g') == "online" ]]; then
     wget -N -O /node2status.json --no-check-certificate ${script_api_base}node2/node2status
         if [[ $(cat /node2status.json | jq '.ping' | sed 's/\"//g') == "success" ]]; then
-            node2_status_mixed="Available; Cloudreve current version : Supported"
+            node2_status_mixed="Available; Cloudreve v${cloudreve_version} : Supported"
+            node2_status_code=0
         else
             node2_status_mixed=Unavailable
+            node2_status_code=1
         fi
 else
     node2_status_mixed=Unavailable
+    node2_status_code=1
 fi
 
 #node 3
@@ -124,18 +130,23 @@ if [[ $(curl -Ls "${script_api_base}node3/status" | jq '.status' | sed 's/\"//g'
                 node3_status_1=Available
                 if [[ $(curl -Ls "${script_api_base}node3/status" | jq '.version' | sed 's/\"//g') == $cloudreve_version ]]; then
                     node3_status_2=Supported
+                    node3_status_code=0
                 else
                     node3_status_2=Unsupported
+                    node3_status_code=1
                 fi
-                node3_status_mixed="${node3_status_1}; Cloudreve current version : ${node3_status_2}"
+                node3_status_mixed="${node3_status_1}; Cloudreve v${cloudreve_version} : ${node3_status_2}"
             else
                 node3_status_mixed=Unavailable
+                node3_status_code=1
             fi
     else
         node3_status_mixed=Unavailable
+        node3_status_code=1
     fi
 else
     node3_status_mixed=Unavailable
+    node3_status_code=1
 fi
 
 #node 4
@@ -147,18 +158,23 @@ if [[ $(curl -Ls "${script_api_base}node4/status" | jq '.status' | sed 's/\"//g'
                 node4_status_1=Available
                 if [[ $(curl -Ls "${script_api_base}node4/status" | jq '.version' | sed 's/\"//g') == $cloudreve_version ]]; then
                     node4_status_2=Supported
+                    node4_status_code=0
                 else
                     node4_status_2=Unsupported
+                    node4_status_code=1
                 fi
-                node4_status_mixed="${node4_status_1}; Cloudreve current version : ${node3_status_2}"
+                node4_status_mixed="${node4_status_1}; Cloudreve v${cloudreve_version} : ${node3_status_2}"
             else
                 node4_status_mixed=Unavailable
+                node4_status_code=1
             fi
     else
         node4_status_mixed=Unavailable
+        node4_status_code=1
     fi
 else
     node4_status_mixed=Unavailable
+    node4_status_code=1
 fi
 
 #node 5
@@ -170,18 +186,23 @@ if [[ $(curl -Ls "${script_api_base}node5/status" | jq '.status' | sed 's/\"//g'
                 node5_status_1=Available
                 if [[ $(curl -Ls "${script_api_base}node5/status" | jq '.version' | sed 's/\"//g') == $cloudreve_version ]]; then
                     node5_status_2=Supported
+                    node5_status_code=0
                 else
                     node5_status_2=Unsupported
+                    node5_status_code=1
                 fi
-                node5_status_mixed="${node5_status_1}; Cloudreve current version : ${node5_status_2}"
+                node5_status_mixed="${node5_status_1}; Cloudreve v${cloudreve_version} : ${node5_status_2}"
             else
                 node5_status_mixed=Unavailable
+                node5_status_code=1
             fi
     else
         node5_status_mixed=Unavailable
+        node5_status_code=1
     fi
 else
     node5_status_mixed=Unavailable
+    node5_status_code=1
 fi
 
 rm -rf /node1status.json
@@ -572,18 +593,104 @@ install_cloudreve_download_node(){
     echo "       Node 5 : Speedcloud    ($node5_status_mixed)"
     sleep 0.1
     echo ""
-    echo "       Notice : the last two nodes are manual maintenances,"
-    sleep 0.1
-    echo "       if cloudreve is updated just now, please choose Node 1 , 2 or 3"
-    sleep 0.1
-    echo ""
-    read -p "       Now, enter 1/2/3/4/5 : " cloudreve_download_node_unconfirmed
-    if [[ $cloudreve_download_node_unconfirmed == "1" ]] || [[ $cloudreve_download_node_unconfirmed == "2" ]] || [[ $cloudreve_download_node_unconfirmed == "3" ]] || [[ $cloudreve_download_node_unconfirmed == "4" ]] || [[ $cloudreve_download_node_unconfirmed == "5" ]]; then
-        echo "       Your node $cloudreve_download_node_unconfirmed set successfully."
-        cloudreve_download_node=$cloudreve_download_node_unconfirmed
+    if [[ $node1_status_code == "1" ]]&&[[ $node2_status_code == "1" ]]&&[[ $node3_status_code == "1" ]]&&[[ $node4_status_code == "1" ]]&&[[ $node5_status_code == "1" ]]; then
+        echo "       Warning : There is no available nodes!"
+        sleep 2
+        exit 1
     else
-        echo "       Error! Please try again!"
-        install_cloudreve_download_node_jump
+        echo "       You can enter 1/2/3/4/5 for Node 1, 2, 3, 4, 5"
+        sleep 0.1
+        echo "       Also, Press enter key will choose one in random order."
+        sleep 0.1
+        echo ""
+        read -p "       Now, enter : " cloudreve_download_node_unconfirmed
+        if [[ $cloudreve_download_node_unconfirmed == "1" ]]; then
+            if [[ $node1_status_code == "0" ]]; then
+                echo "       Your node $cloudreve_download_node_unconfirmed set successfully."
+                cloudreve_download_node=$cloudreve_download_node_unconfirmed
+            elif [[ $node1_status_code == "1" ]]; then
+                echo "       This node is not available! Please try again!"
+                install_cloudreve_download_node_jump
+            fi
+        elif [[ $cloudreve_download_node_unconfirmed == "2" ]]; then
+            if [[ $node2_status_code == "0" ]]; then
+                echo "       Your node $cloudreve_download_node_unconfirmed set successfully."
+                cloudreve_download_node=$cloudreve_download_node_unconfirmed
+            elif [[ $node2_status_code == "1" ]]; then
+                echo "       This node is not available! Please try again!"
+                install_cloudreve_download_node_jump
+            fi
+        elif [[ $cloudreve_download_node_unconfirmed == "3" ]]; then
+            if [[ $node3_status_code == "0" ]]; then
+                echo "       Your node $cloudreve_download_node_unconfirmed set successfully."
+                cloudreve_download_node=$cloudreve_download_node_unconfirmed
+            elif [[ $node3_status_code == "1" ]]; then
+                echo "       This node is not available! Please try again!"
+                install_cloudreve_download_node_jump
+            fi
+        elif [[ $cloudreve_download_node_unconfirmed == "4" ]]; then
+            if [[ $node4_status_code == "0" ]]; then
+                echo "       Your node $cloudreve_download_node_unconfirmed set successfully."
+                cloudreve_download_node=$cloudreve_download_node_unconfirmed
+            elif [[ $node4_status_code == "1" ]]; then
+                echo "       This node is not available! Please try again!"
+                install_cloudreve_download_node_jump
+            fi
+        elif [[ $cloudreve_download_node_unconfirmed == "5" ]]; then
+            if [[ $node5_status_code == "0" ]]; then
+                echo "       Your node $cloudreve_download_node_unconfirmed set successfully."
+                cloudreve_download_node=$cloudreve_download_node_unconfirmed
+            elif [[ $node5_status_code == "1" ]]; then
+                echo "       This node is not available! Please try again!"
+                install_cloudreve_download_node_jump
+            fi
+        elif [[ $cloudreve_download_node_unconfirmed == "" ]]; then
+            if [[ $node5_status_code == "0" ]]; then
+                echo "       The default node 5 set successfully."
+                cloudreve_download_node=5
+            elif [[ $node5_status_code == "1" ]]; then
+                if [[ $node4_status_code == "0" ]]; then
+                    echo "       The default node 4 set successfully."
+                    cloudreve_download_node=4
+                elif [[ $node4_status_code == "1" ]]; then
+                    if [[ $node3_status_code == "0" ]]; then
+                        echo "       The default node 3 set successfully."
+                        cloudreve_download_node=3
+                    elif [[ $node3_status_code == "1" ]]; then
+                        if [[ $node2_status_code == "0" ]]; then
+                            echo "       The default node 2 set successfully."
+                            cloudreve_download_node=2
+                        elif [[ $node1_status_code == "1" ]]; then
+                            if [[ $node1_status_code == "0" ]]; then
+                                echo "       The default node 1 set successfully."
+                                cloudreve_download_node=1
+                            elif [[ $node5_status_code == "1" ]]; then
+                                echo "       Something happened."
+                                exit 1
+                            else
+                                echo "       Something Wrong! "
+                                exit 1
+                            fi
+                        else
+                            echo "       Something Wrong! "
+                            exit 1
+                        fi
+                    else
+                        echo "       Something Wrong! "
+                        exit 1
+                    fi
+                else
+                    echo "       Something Wrong! "
+                    exit 1
+                fi
+            else
+                echo "       Something Wrong! "
+                exit 1
+            fi
+        else
+            echo "       Error! Please try again!"
+            install_cloudreve_download_node_jump
+        fi
     fi
 }
 
@@ -780,9 +887,13 @@ install_cloudreve_mode_confirm
 if [[ $cloudreve_install_mode == "M" ]] || [[ $cloudreve_install_mode == "m" ]] || [[ $cloudreve_install_mode == "" ]]; then
     install_cloudreve_mode=master
     cloudreve_mixed_name=cloudreve_${cloudreve_type}_master
+    sleep 0.1
+    echo "       Your mode $install_cloudreve_mode set successfully."
 elif [[ $cloudreve_install_mode == "S" ]] || [[ $cloudreve_install_mode == "s" ]] ; then
     install_cloudreve_mode=slave
-    cloudreve_mixed_name=cloudreve_${cloudreve_type}_slave     
+    cloudreve_mixed_name=cloudreve_${cloudreve_type}_slave
+    sleep 0.1
+    echo "       Your mode $install_cloudreve_mode set successfully."
 else
     echo "       Wrong mode! Please try again!"
         sleep 2
