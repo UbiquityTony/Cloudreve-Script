@@ -1,5 +1,6 @@
 # Cloudreve-Script
 Cloudreve fully automatic only with one click installation, upgrade and management script.
+TG通知：https://t.me/cloudreve_script_notifications
 ## 正式版 （稳定可用）(v2.0.0)
 
 ```shell
