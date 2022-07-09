@@ -15,11 +15,12 @@ wget -N --no-check-certificate https://github.com/UbiquityTony/Cloudreve-Script/
 ```
 
 # 中文版安装教程/Chinese installation tutorial<br>
-这是中文版教程，英文版在下面↓↓/ This is the Chinese version of the tutorial, and the English version is below ↓↓<br>
+这是中文版教程，英文版在下面↓↓/ This is the Chinese version of the tutorial, and the English version is below ↓↓
+
 不懂cloudreve的请先到这里了解一下：https://cloudreve.org<br>
 
 准备：
-1.服务器（vps）   2.ssh软件
+1.服务器（vps）   2.ssh软件（WindTerm、putty等）
 
 开始安装：
 1.连接服务器（vps），这里用putty示范。
