@@ -13,10 +13,10 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/UbiquityTony/Cl
 ```shell
 wget -N --no-check-certificate https://github.com/UbiquityTony/Cloudreve-Script/releases/download/1.1.0/patch.sh && bash patch.sh
 ```
- <br>
+
 # 中文版安装教程/Chinese installation tutorial<br>
 这是中文版教程，英文版在下面↓↓/ This is the Chinese version of the tutorial, and the English version is below ↓↓<br>
-不懂cloudreve的请先到这里了解一下：https://cloudreve.org
+不懂cloudreve的请先到这里了解一下：https://cloudreve.org<br>
 
 准备：
 1.服务器（vps）   2.ssh软件
