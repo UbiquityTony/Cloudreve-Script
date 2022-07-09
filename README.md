@@ -38,7 +38,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/UbiquityTony/Cl
      如果你是小白，可以一直按回车键，使用默认配置即可。<br>
      接下来按任意键继续，按CTRL+C退出安装。
 
-3.选择cloudreve模式<br>
+3.选择cloudreve模式
 这时候就选择是从机模式还是主机模式了。输入“M”或“m”就选择安装从机模式，输入“S”或“s”就选择安装主机模式。
 [![图片3](https://speedcloud.cf/api/v3/file/source/43407/3.png?sign=LInqdyTWkh2S1V0n7ulm6kJFet6fkTbfre7pPcmsFVk%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43407/3.png?sign=LInqdyTWkh2S1V0n7ulm6kJFet6fkTbfre7pPcmsFVk%3D%3A0)
 
@@ -64,9 +64,8 @@ Node 5：Onedrive（地点在美国）<br>
 
 7.按下任意键即可开始安装，只需静等安装完成就行了……
 
-Cloudreve-Script主程序安装完毕！
+Cloudrev主程序安装完毕！
 
-12、反向代理<br>
-   我也懒得写了，你自己看着办
+12、反向代理
 
 # 以上就全部安装完毕了，尽情使用Cloudreve吧！
