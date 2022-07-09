@@ -1,8 +1,8 @@
 # Cloudreve-Script
-Cloudreve全自动安装脚本，只需通过脚本即可傻瓜式安装、升级和管理cloudreve。
+Cloudreve全自动安装脚本，只需通过脚本即可傻瓜式安装、升级和管理cloudreve。<br>
 Cloudreve fully automatic only with one click installation, upgrade and management script.
 
-TG通知：https://t.me/cloudreve_script_notifications
+TG通知：https://t.me/cloudreve_script_notifications<br>
 TG notification：https://t.me/cloudreve_script_notifications
 ## 正式版 （稳定可用）(v2.1.0) / Official version (stable and available) (v2.1.0)
 
