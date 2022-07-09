@@ -14,7 +14,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/UbiquityTony/Cl
 wget -N --no-check-certificate https://github.com/UbiquityTony/Cloudreve-Script/releases/download/1.1.0/patch.sh && bash patch.sh
 ```
  <br>
-## 中文版安装教程/Chinese installation tutorial<br>
+# 中文版安装教程/Chinese installation tutorial<br>
 这是中文版教程，英文版在下面↓↓/ This is the Chinese version of the tutorial, and the English version is below ↓↓<br>
 不懂cloudreve的请先到这里了解一下：https://cloudreve.org
 
@@ -43,7 +43,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/UbiquityTony/Cl
 [![图片3](https://speedcloud.cf/api/v3/file/source/43407/3.png?sign=LInqdyTWkh2S1V0n7ulm6kJFet6fkTbfre7pPcmsFVk%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43407/3.png?sign=LInqdyTWkh2S1V0n7ulm6kJFet6fkTbfre7pPcmsFVk%3D%3A0)
 
 4.选择cloudreve安装路径
-必须以/开头，必须是绝对路径，按自己需求选择，直接enter则使用默认安装目录/data/cloudreve _community_master安装。
+必须以/开头，必须是绝对路径，按自己需求选择，直接enter则使用默认安装目录/data/cloudreve _community_master安装。<br>
 [![图片4](https://speedcloud.cf/api/v3/file/source/43408/4.png?sign=WkVsw0Yxv_lVnSxhJmZG_0WdmhrE7oEFLpPAysLwYKI%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43408/4.png?sign=WkVsw0Yxv_lVnSxhJmZG_0WdmhrE7oEFLpPAysLwYKI%3D%3A0)
 
 5.选择运行端口
