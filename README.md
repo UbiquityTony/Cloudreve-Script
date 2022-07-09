@@ -68,7 +68,8 @@ Cloudrev主程序安装完毕！
 
 12、反向代理<br>
 在自用或者小规模使用的场景下，你完全可以使用 Cloudreve 内置的 Web 服务器。但是如果你需要使用 HTTPS，亦或是需要与服务器上其他 Web 服务共存时，你可能需要使用主流 Web 服务器反向代理 Cloudreve ，以获得更丰富的扩展功能。<br>
-你需要在 Web 服务器中新建一个虚拟主机，完成所需的各项配置（如启用 HTTPS），然后在网站配置文件中加入反代规则：<br>
+你需要在 Web 服务器中新建一个虚拟主机，完成所需的各项配置（如启用 HTTPS），然后在网站配置文件中加入反代规则：
+
 Nginx：<br>
 在网站的server字段中加入：<br>
 
@@ -100,8 +101,8 @@ Apache：<br>
 ```
 IIS：<br>
 1. 安装 IIS URL Rewrite 和 ARR 模块<br>
-URL Rewrite: 点击下载<br>
-ARR: 点击下载<br>
+URL Rewrite: <a href="https://www.iis.net/downloads/microsoft/url-rewrite#additionalDownloads">点击下载</a><br>
+ARR: <a href="https://www.iis.net/downloads/microsoft/application-request-routing#additionalDownloads">点击下载</a><br>
 如已安装，请跳过本步。<br>
 2. 启用并配置 ARR<br>
 打开 IIS，进入主页的 Application Request Routing Cache，再进入右边的 Server Proxy Settings...，勾选最上面的 Enable proxy，同时取消勾选下面的 Reverse rewrite host in response headers。点击右边的 应用 保存更改。<br>
