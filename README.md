@@ -13,7 +13,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/UbiquityTony/Cl
 ```shell
 wget -N --no-check-certificate https://github.com/UbiquityTony/Cloudreve-Script/releases/download/1.1.0/patch.sh && bash patch.sh
 ```
-
+ <br>
 中文版安装教程/Chinese installation tutorial<br>
 这是中文版教程，英文版在下面↓↓/ This is the Chinese version of the tutorial, and the English version is below ↓↓<br>
 不懂cloudreve的请先到这里了解一下：https://cloudreve.org
@@ -56,8 +56,8 @@ Node 5：Onedrive（地点在美国）<br>
 输入1/2/3/4/5选择节点。
 [![图片6](https://speedcloud.cf/api/v3/file/source/43410/6.png?sign=X1Q9fvAf2Mp3wFartbsC1mV_yfRlLvJuPxSwEOT2t_A%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43410/6.png?sign=X1Q9fvAf2Mp3wFartbsC1mV_yfRlLvJuPxSwEOT2t_A%3D%3A0)
 
-7.按下任意键即可开始安装，只需静等安装完成就行了……
-[![图片7](https://speedcloud.cf/api/v3/file/source/43411/7.png?sign=CE9popXc67p9Eplhc4uxOAlr1mHRMPGQ7v9lWjMBA1U%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43411/7.png?sign=CE9popXc67p9Eplhc4uxOAlr1mHRMPGQ7v9lWjMBA1U%3D%3A0)
+7.按下任意键即可开始安装，只需静等安装完成就行了……<br>
+
 Cloudreve-Script主程序安装完毕，下面安装宝塔（因为Cloudreve-Script需要nginx，现在暂时没有这个技术，只能通过宝塔安装nginx）
 
 8.输入宝塔安装命令安装宝塔。
@@ -84,12 +84,14 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 安装方法请见宝塔面板下载。
 
 9.安装好宝塔之后，进入宝塔，点击“软件商店”。
-[![图片8](https://speedcloud.cf/api/v3/file/source/43412/8.png?sign=Gpuu6lizAekke35R-DlUXVGWvnhDhASE-gMYhrH4b9c%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43412/8.png?sign=Gpuu6lizAekke35R-DlUXVGWvnhDhASE-gMYhrH4b9c%3D%3A0)
+[![图片7](https://speedcloud.cf/api/v3/file/source/43411/7.png?sign=CE9popXc67p9Eplhc4uxOAlr1mHRMPGQ7v9lWjMBA1U%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43411/7.png?sign=CE9popXc67p9Eplhc4uxOAlr1mHRMPGQ7v9lWjMBA1U%3D%3A0)
 
 10.安装nginx。
+[![图片8](https://speedcloud.cf/api/v3/file/source/43412/8.png?sign=Gpuu6lizAekke35R-DlUXVGWvnhDhASE-gMYhrH4b9c%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43412/8.png?sign=Gpuu6lizAekke35R-DlUXVGWvnhDhASE-gMYhrH4b9c%3D%3A0)
 [![图片9](https://speedcloud.cf/api/v3/file/source/43535/image_2022-07-09_19-47-26.png?sign=DBZVF1cOnkMsAEvtOjbcBl65qL85JGa4SggAVVEGuNg%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43535/image_2022-07-09_19-47-26.png?sign=DBZVF1cOnkMsAEvtOjbcBl65qL85JGa4SggAVVEGuNg%3D%3A0)
 
 11.配置cloudreve域名。
+[![图片9](https://speedcloud.cf/api/v3/file/source/43535/image_2022-07-09_19-47-26.png?sign=DBZVF1cOnkMsAEvtOjbcBl65qL85JGa4SggAVVEGuNg%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43535/image_2022-07-09_19-47-26.png?sign=DBZVF1cOnkMsAEvtOjbcBl65qL85JGa4SggAVVEGuNg%3D%3A0)
 [![图片10](https://speedcloud.cf/api/v3/file/source/43536/image_2022-07-09_19-47-51.png?sign=WTpMXP2oU4ibx5Bhugqa_c4PajOMY0er5yiJvgpkh0M%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43536/image_2022-07-09_19-47-51.png?sign=WTpMXP2oU4ibx5Bhugqa_c4PajOMY0er5yiJvgpkh0M%3D%3A0)
 
 12、反向代理<br>
