@@ -22,7 +22,7 @@ wget -N --no-check-certificate https://github.com/UbiquityTony/Cloudreve-Script/
 
 开始安装：
 1.连接服务器（vps），这里用putty示范。
-
+[![图片1](https://speedcloud.cf/api/v3/file/source/43406/1.png?sign=VtFLliTwsKX2UUwYRvHV56Xz9GJj-yPmTOlgNQsclbU%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43406/1.png?sign=VtFLliTwsKX2UUwYRvHV56Xz9GJj-yPmTOlgNQsclbU%3D%3A0)
 
 2.运行Cloudreve-Script安装脚本。
 正式版 （稳定可用）(v2.0.0)
