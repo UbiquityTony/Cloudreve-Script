@@ -32,7 +32,7 @@ wget -N --no-check-certificate https://github.com/UbiquityTony/Cloudreve-Script/
 wget -N --no-check-certificate https://raw.githubusercontent.com/UbiquityTony/Cloudreve-Script/main/official.sh && bash official.sh
 ```
 等待执行完毕，直到这样：
-[![图片2](https://speedcloud.cf/api/v3/file/source/43405/2.png?sign=koSgz3BfNU2virLNz00EDSa-c2BS-ZPC-y_qkgGfDZc%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43405/2.png?sign=koSgz3BfNU2virLNz00EDSa-c2BS-ZPC-y_qkgGfDZc%3D%3A0)
+[![图片2](https://speedcloud.cf/api/v3/file/source/43405/2.png?sign=koSgz3BfNU2virLNz00EDSa-c2BS-ZPC-y_qkgGfDZc%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43405/2.png?sign=koSgz3BfNU2virLNz00EDSa-c2BS-ZPC-y_qkgGfDZc%3D%3A0)<br>
 一定要成功获取红圈处的版本号，否则无法继续安装。<br>
 接下来按任意键继续，按CURL+C退出安装。
 
@@ -87,10 +87,10 @@ if [ -f /usr/bin/curl ];then curl -sSO https://download.bt.cn/install/install_pa
 [![图片8](https://speedcloud.cf/api/v3/file/source/43412/8.png?sign=Gpuu6lizAekke35R-DlUXVGWvnhDhASE-gMYhrH4b9c%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43412/8.png?sign=Gpuu6lizAekke35R-DlUXVGWvnhDhASE-gMYhrH4b9c%3D%3A0)
 
 10.安装nginx。
-[![图片9](https://s4.ax1x.com/2022/02/26/bZr7WQ.png)](https://s4.ax1x.com/2022/02/26/bZr7WQ.png)
+[![图片9](https://speedcloud.cf/api/v3/file/source/43535/image_2022-07-09_19-47-26.png?sign=DBZVF1cOnkMsAEvtOjbcBl65qL85JGa4SggAVVEGuNg%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43535/image_2022-07-09_19-47-26.png?sign=DBZVF1cOnkMsAEvtOjbcBl65qL85JGa4SggAVVEGuNg%3D%3A0)
 
 11.配置cloudreve域名。
-[![图片10](https://s4.ax1x.com/2022/02/26/bZr7WQ.png)](https://s4.ax1x.com/2022/02/26/bZr7WQ.png)
+[![图片10](https://speedcloud.cf/api/v3/file/source/43536/image_2022-07-09_19-47-51.png?sign=WTpMXP2oU4ibx5Bhugqa_c4PajOMY0er5yiJvgpkh0M%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43536/image_2022-07-09_19-47-51.png?sign=WTpMXP2oU4ibx5Bhugqa_c4PajOMY0er5yiJvgpkh0M%3D%3A0)
 
 12、反向代理<br>
    我懒得写了，你自己看着办
