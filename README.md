@@ -67,7 +67,7 @@ Node 5：Onedrive（地点在美国）<br>
 
 Cloudrev主程序安装完毕！
 
-12、反向代理<br>
+8、反向代理<br>
 在自用或者小规模使用的场景下，你完全可以使用 Cloudreve 内置的 Web 服务器。但是如果你需要使用 HTTPS，亦或是需要与服务器上其他 Web 服务共存时，你可能需要使用主流 Web 服务器反向代理 Cloudreve ，以获得更丰富的扩展功能。<br>
 你需要在 Web 服务器中新建一个虚拟主机，完成所需的各项配置（如启用 HTTPS），然后在网站配置文件中加入反代规则：
 
@@ -153,38 +153,38 @@ requestLimits 中的 60000000 为传输文件大小限制，单位 byte，如果
 For those who don't understand cloudrev, please come here first to understand: https://cloudreve.org<br>
 
 get ready: 
-1. Server (VPS)     2.SSH software (windterm, putty, etc.)
+1.Server (VPS)     2.SSH software (windterm, putty, etc.)
 
 Start installation: 
-1. Connect to the server (VPS). Putty is used here for demonstration. 
+1.Connect to the server (VPS). Putty is used here for demonstration. 
 [![picture 1]（https://speedcloud.cf/api/v3/file/source/43406/1.png?sign=VtFLliTwsKX2UUwYRvHV56Xz9GJj-yPmTOlgNQsclbU%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43406/1.png?sign=VtFLliTwsKX2UUwYRvHV56Xz9GJj-yPmTOlgNQsclbU%3D%3A0)
 
-2. Run the cloudrev script installation script<br>
+2.Run the cloudrev script installation script<br>
 Official version (stable and available) (v2.1.0)
 
 ```shell
 wget -N --no-check-certificate https://raw.githubusercontent.com/UbiquityTony/Cloudreve-Script/main/official.sh && bash official.sh
 ```
-After entering, the dependency will be automatically installed. Don't panic when encountering "e", just ignore it. Wait until the execution is completed: 
+After entering, the dependency will be automatically installed. Don't panic when encountering "e", just ignore it. Wait until the execution is completed:<br>
 [![图片2](https://speedcloud.cf/api/v3/file/source/43405/2.png?sign=koSgz3BfNU2virLNz00EDSa-c2BS-ZPC-y_qkgGfDZc%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43405/2.png?sign=koSgz3BfNU2virLNz00EDSa-c2BS-ZPC-y_qkgGfDZc%3D%3A0)<br>
 Note: the version number in the red circle must be obtained successfully, otherwise the installation cannot continue<br>
 Failed to get. Please try to press ctrl+c to exit the installation and run again)<br>
 If you are Xiaobai, you can press enter all the time and use the default configuration<br>
 Next, press any key to continue, and press ctrl+c to exit the installation. 
 
-3. Select cloudrev mode<br>
+3.Select cloudrev mode<br>
 At this time, it is time to choose slave mode or master mode. Enter "m" or "m" to select the installation slave mode, and enter "s" or "s" to select the installation master mode. 
 [![图片3](https://speedcloud.cf/api/v3/file/source/43407/3.png?sign=LInqdyTWkh2S1V0n7ulm6kJFet6fkTbfre7pPcmsFVk%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43407/3.png?sign=LInqdyTWkh2S1V0n7ulm6kJFet6fkTbfre7pPcmsFVk%3D%3A0)
 
-4. Select the cloudrev installation path<br>
+4.Select the cloudrev installation path<br>
 It must start with / and must be an absolute path. You can choose according to your needs. If you enter directly, you will use the default installation directory /data/cloudrev_community_Master installation<br>
 [![图片4](https://speedcloud.cf/api/v3/file/source/43408/4.png?sign=WkVsw0Yxv_lVnSxhJmZG_0WdmhrE7oEFLpPAysLwYKI%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43408/4.png?sign=WkVsw0Yxv_lVnSxhJmZG_0WdmhrE7oEFLpPAysLwYKI%3D%3A0)
 
-5. Select the operation port<br>
+5.Select the operation port<br>
 The port must be between 1-65535. You can enter enter to use the default port 5212. 
 [![图片5](https://speedcloud.cf/api/v3/file/source/43409/5.png?sign=U77Hcnq6fzCMGknnkCrBoEdbCatJt1rfcpELDD3QRuA%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43409/5.png?sign=U77Hcnq6fzCMGknnkCrBoEdbCatJt1rfcpELDD3QRuA%3D%3A0)
 
-6. Finally, select the download node<br>
+6.Finally, select the download node<br>
 At present, there are five nodes to choose (there may be more in the future). The user selects the nearest node according to the server (VPS). Please check the availability of each node according to the actual situation<br>
 Note: if unavailable is displayed, it means unavailable; if available is displayed, it means available<br>
 Information of each node:<br>
@@ -196,11 +196,11 @@ Node 5:onedrive (located in the United States)<br>
 Enter 1/2/3/4/5 to select a node. 
 [![图片6](https://speedcloud.cf/api/v3/file/source/43410/6.png?sign=X1Q9fvAf2Mp3wFartbsC1mV_yfRlLvJuPxSwEOT2t_A%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43410/6.png?sign=X1Q9fvAf2Mp3wFartbsC1mV_yfRlLvJuPxSwEOT2t_A%3D%3A0)
 
-7. Press any key to start the installation. Just wait for the installation to complete……
+7.Press any key to start the installation. Just wait for the installation to complete……
 
 Cloudrev main program is installed!
 
-12. Reverse proxy<br>
+8.Reverse proxy<br>
 In the scenario of self use or small-scale use, you can use the built-in web server of cloudrev. However, if you need to use HTTPS or coexist with other web services on the server, you may need to use cloudrev, a mainstream web server reverse proxy, to obtain richer extension functions<br>
 You need to create a new virtual host in the web server, complete the required configurations (such as enabling HTTPS), and then add anti substitution rules to the website configuration file: 
 
