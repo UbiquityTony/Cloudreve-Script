@@ -147,7 +147,7 @@ requestLimits 中的 60000000 为传输文件大小限制，单位 byte，如果
 </configuration>
 ```
 
-### 以上就全部安装完毕了，尽情使用Cloudreve吧！
+### 以上就全部安装完毕了，尽情使用Cloudreve吧！<br>
 
 
 # Installation tutorial in English/英文版安装教程<br>
