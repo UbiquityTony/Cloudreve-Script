@@ -152,12 +152,12 @@ requestLimits 中的 60000000 为传输文件大小限制，单位 byte，如果
 # Installation tutorial in English/英文版安装教程<br>
 For those who don't understand cloudrev, please come here first to understand: https://cloudreve.org<br>
 
-get ready: 
+get ready:<br>
 1.Server (VPS)     2.SSH software (windterm, putty, etc.)
 
-Start installation: 
+Start installation:<br>
 1.Connect to the server (VPS). Putty is used here for demonstration. 
-[![picture 1]（https://speedcloud.cf/api/v3/file/source/43406/1.png?sign=VtFLliTwsKX2UUwYRvHV56Xz9GJj-yPmTOlgNQsclbU%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43406/1.png?sign=VtFLliTwsKX2UUwYRvHV56Xz9GJj-yPmTOlgNQsclbU%3D%3A0)
+[![图片1](https://speedcloud.cf/api/v3/file/source/43406/1.png?sign=VtFLliTwsKX2UUwYRvHV56Xz9GJj-yPmTOlgNQsclbU%3D%3A0)](https://speedcloud.cf/api/v3/file/source/43406/1.png?sign=VtFLliTwsKX2UUwYRvHV56Xz9GJj-yPmTOlgNQsclbU%3D%3A0)
 
 2.Run the cloudrev script installation script<br>
 Official version (stable and available) (v2.1.0)
